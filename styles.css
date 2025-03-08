@@ -5,28 +5,28 @@
     box-sizing: border-box;
 }
 
-.h1 {
+h1 {
     font-family: Outfit;
     font-style: Extra-bold;
     background-color: #f4f4f4;
     color: #333;
 }
 
-.h2 {
+h2 {
     font-family: Outfit;
     font-style: Extra-bold;
     background-color: #f4f4f4;
     color: #333;
 }
 
-.h3 {
+h3 {
     font-family: Outfit;
     font-style: Extra-bold;
     background-color: #f4f4f4;
     color: #333;
 }
 
-.h4 {
+h4 {
     font-family: Outfit;
     font-style: Extra-bold;
     background-color: #f4f4f4;
@@ -34,7 +34,7 @@
 }
 
 /* Základní styl pro tělo stránky */
-body {
+p {
     font-family: Montsserat;
     background-color: #f4f4f4;
     color: #333;
