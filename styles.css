@@ -16,28 +16,28 @@ h2 {
     font-family: Outfit;
     font-style: Extra-bold;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000;
 }
 
 h3 {
     font-family: Outfit;
     font-style: Extra-bold;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000;
 }
 
 h4 {
     font-family: Outfit;
     font-style: Extra-bold;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000;
 }
 
 /* Základní styl pro tělo stránky */
 p {
     font-family: Montsserat;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000;
 }
 
 /* Kontajner pro lepší centrování obsahu */
