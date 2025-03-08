@@ -1,1 +1,120 @@
-ahoj
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukázková stránka</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Záhlaví -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Fitness</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">O nás</a></li>
+                    <li><a href="services.html">Služby</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Úvodní sekce s fotkou -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Vítejte na naší stránce!</h1>
+            <p>Tvůj jediný limit je ten, který si sám nastavíš.</p>
+            <img src="images/uvod.PNG">
+        </div>
+    </section>
+
+    <!-- Sekce O nás -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>O nás</h2>
+<p>Jsme tým vášnivých fitness nadšenců, kteří věří, že každý může dosáhnout svého nejlepšího já. </br> Naší misí je inspirovat vás k tomu, abyste se cítili silní, zdraví a sebevědomí v každém aspektu vašeho života.
+</br> </br>
+Ať už jste zkušený sportovec nebo začátečník, naše tréninky jsou navrženy tak, aby vám pomohly posunout vaše limity. </br> Věříme v holistický přístup k fitness – to znamená, že se zaměřujeme na tělo, mysl a duši. Naši trenéři a odborníci na výživu </br> vám pomohou dosáhnout vašich cílů efektivně a bezpečně.</p>
+        </div>
+    </section>
+
+    <!-- Sekce Služby -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Naše tréninky</h2>
+            <div class="service-boxes">
+                <div class="service-box">
+                    <img src="images/muz.PNG">
+                    <h3>Trénink pro muže</h3>
+                    <p>Trénink pro muže kombinuje silový trénink, kardio a strečink pro zvýšení síly, spalování tuků a zlepšení kondice.</p>
+                </div>
+                <div class="service-box">
+                    <img src="images/zena.PNG">
+                    <h3>Trénink pro ženy</h3>
+                    <p>
+Trénink pro ženy kombinuje kardio, silový trénink pro zlepšení kondice, spalování tuků, zpevnění postavy a zvýšení síly. </br> Je přizpůsobený různým úrovním kondice a cílům.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sekce Ceník -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Ceník</h2>
+<table>
+	<tr>
+	    <th>jednorázový vstup</th>
+	</tr>
+	<tr>
+	    <td>90 kč </br> student/senior</td>
+	    <td>100 kč </br> dospělý</td>
+	</tr>
+	<tr>
+	    <th>10-denní pernamentka</th>
+	</tr>
+	<tr>
+	    <td>400 kč </br> student/senior</td>
+	    <td>500 kč </br> dospělý</td>
+	</tr>
+</table>
+        </div>
+    </section>
+
+
+
+    <!-- Sekce Kontakt -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontaktujte nás</h2>
+            <form>
+                <label for="name">Vaše jméno</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Váš email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Vaše zpráva</label>
+                <textarea id="message" name="message" placeholder="Vaše zpráva" required></textarea>
+
+                <button type="submit">Odeslat</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Patička -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Moje Stránka. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
