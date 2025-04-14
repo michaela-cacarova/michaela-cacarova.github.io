@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+h1 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 64px;
+}
+
+h2 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 54px;
+}
+
+h3 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 36px;
+}
+
+h4 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+h5 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+h6 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+p {
+    color: #000;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h7 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+h8 {
+    color: #000;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32.5px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #1d5be0;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #1d5be0;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.header-button {
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    color: #1d5be0;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background-color: #1d5be0;
+    color: #fff;
+}
+
+.hero {
+    height: 750px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: left;
+    padding: 32.5px;
+}
+
+.hero-content h1 {
+    color: #fff;
+}
+
+.hero-content h4 {
+    color: #fff;
+    margin: -10px 0;
+}
+
+.hero-content p {
+    color: #fff;
+    margin: 25px 0;
+}
+
+.hero-button {
+    width: 140px;
+    height: 45px;
+    background-color: #fff;
+    color: #1d5be0;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: none;
+}
+
+.hero-button:hover {
+    background-color: #1d5be0;
+    color: #fff;
+}
+
+.containers {
+    display: flex;
+    width: 1300px;
+    padding: 37.5px 32.5px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+}
+
+.service-boxes {
+    display: flex;
+    max-width: 1300px;
+    padding: 37.5px 32.5px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.benefits {
+    display: flex;
+    width: 1300px;
+    background-color: #fff;
+    padding: 37.5px 32.5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.benefits h5 {
+    color: #1d5be0;
+}
+
+.team {
+    display: flex;
+    max-width: 1300px;
+    background-color: #000;
+    flex-direction: column;
+}
+
+.team h3 {
+    color: #fff;
+}
+
+.team h5 {
+    color: #fff;
+}
+
+
+.team h6 {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 0 16px 0;
+}
+
+.team p {
+    color: #fff;
+}
+
+
+
+
+/*to jsou už naše služby*/
+.services-buttons-containers {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+
+.services-button {
+    width: auto;
+    height: 45px;
+    background-color: #fff;
+    color: #000;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid var(--black, #000);
+}
+
+.services-button:hover {
+    background-color: #1d5be0;
+    color: #fff;
+    border: none;
+}
+
+
+
+
+
+
+/*tohle je patička*/
+.containeres {
+    display: flex;
+    max-width: 1300px;
+    height: 367px;
+    padding: 37.5px 32.5px;
+    flex-direction: column;
+    align-items: left;
+    gap: 35px;
+}
+
+.services-boxs {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+.navbars {
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32.5px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-family: Outfit;
+    font-weight: 800;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #1d5be0;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #1d5be0;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.cara {
+    width: 1170px;
+    height: 1px;
+    position: relative;
+    border-top;
+    border: 1px solid;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.containerend {
+    width: 100%;
+    max-width: 1300px;
+    background-color: #000;
+    display: flex;
+    padding: 7.5px 32.5px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.containerend h7 {
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+}
