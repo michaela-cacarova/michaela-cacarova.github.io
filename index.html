@@ -208,6 +208,8 @@ const v = d.createElement(t),
 s = d.getElementsByTagName(t)[0];
 
 v.onload = function () {
+try {
+setTimeout(function() {
 window.voiceflow.chat.load({
 verify: { projectID: '68090c648ae2defefb1c22d4' },
 url: 'https://general-runtime.voiceflow.com',
@@ -217,7 +219,29 @@ allowDangerousHTML: true,
 assistant: {
 stylesheet: 'https://trixtecheu.github.io/FINENET/style.css',
 },
+}).then(() => {
+window.voiceflow.chat.proactive.clear();
+setTimeout(function() {
+window.voiceflow.chat.proactive.push({
+type: "text",
+payload: {
+message: "👋🏻 Dobrý den, potřebujete rychlou odpověď?"
+}
 });
+}, 2000);
+setTimeout(function() {
+window.voiceflow.chat.proactive.push({
+type: "text",
+payload: {
+message: "Rád vám pomůžu!"
+}
+});
+}, 3500);
+});
+}, 500);
+} catch (error) {
+console.error('Error during initialization:', error);
+}
 };
 
 v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
