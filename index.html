@@ -202,29 +202,53 @@ Pomáháme firmám automatizovat zákaznickou komunikaci a zlepšovat zákaznick
         </div>
 <!-- AI chatbot -->
 <script type="module">
-    (function (d, t) {
-      const v = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-  
-      v.onload = function () {
-        window.voiceflow.chat.load({
-          verify: { projectID: '6836bbdda98ac02d6832b714' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          render: { mode: 'overlay' },
-          allowDangerousHTML: true,
-          assistant: {
-            stylesheet: 'https://trixtecheu.github.io/TEST/styles.css',
-          },
-        });
-      };
-  
-      v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
-      v.type = 'text/javascript';
-      s.parentNode.insertBefore(v, s);
-    })(document, 'script');
-  </script>
-  <!-- TrixTech s.r.o. @2025 -->  
+  (function (d, t) {
+    const v = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+
+    v.onload = function () {
+      try {
+        setTimeout(function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '682ebe8b05965ccb2b335b5f' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production',
+            render: { mode: 'overlay' },
+            allowDangerousHTML: true,
+            assistant: {
+              stylesheet: 'https://github.io/TRIXTECHEU/ILLA/style.css',
+            },
+          }).then(() => {
+            window.voiceflow.chat.proactive.clear();
+            setTimeout(function() {
+              window.voiceflow.chat.proactive.push({
+                type: "text",
+                payload: {
+                  message: "👋🏻 Zdravím vás, potřebujete poradit?"
+                }
+              });
+            }, 2000);
+            setTimeout(function() {
+              window.voiceflow.chat.proactive.push({
+                type: "text",
+                payload: {
+                  message: "Jsem tu pro vás!"
+                }
+              });
+            }, 3500);
+          });
+        }, 500);
+      } catch (error) {
+        console.error('Error during initialization:', error);
+      }
+    };
+
+    v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+    v.type = 'text/javascript';
+    s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+<!-- TrixTech s.r.o. @2025 -->
 	
 </body>
 </html>
