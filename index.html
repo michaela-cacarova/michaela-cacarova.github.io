@@ -200,58 +200,6 @@
 Pomáháme firmám automatizovat zákaznickou komunikaci a zlepšovat zákaznický servis. 🚀</h7>
             <h7>&copy; 2025 TRIX</h7>
         </div>
-	    
-<!-- AI chatbot -->
-<script src="https://trixtecheu.github.io/TWINER/LoadingAnimationExtension.js"></script>
-<script type="module">
-  (function (d, t) {
-    const v = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-
-    v.onload = function () {
-      try {
-        setTimeout(function() {
-          window.voiceflow.chat.load({
-            verify: { projectID: '683439dce3e4ba215ad220d5' },
-            url: 'https://general-runtime.voiceflow.com',
-            versionID: 'production',
-            render: { mode: 'overlay' },
-            allowDangerousHTML: true,
-            assistant: {
-	      extensions: [window.LoadingAnimationExtension],
-              stylesheet: 'https://trixtecheu.github.io/TWINER/Styles.css',
-            },
-          }).then(() => {
-            window.voiceflow.chat.proactive.clear();
-            setTimeout(function() {
-              window.voiceflow.chat.proactive.push({
-                type: "text",
-                payload: {
-                  message: "👋🏻 Zdravíme vás! Hledáte experta, mentora nebo inspiraci?"
-                }
-              });
-            }, 2000);
-            setTimeout(function() {
-              window.voiceflow.chat.proactive.push({
-                type: "text",
-                payload: {
-                  message: "Rádi vás nasměrujeme!"
-                }
-              });
-            }, 3500);
-          });
-        }, 500);
-      } catch (error) {
-        console.error('Error during initialization:', error);
-      }
-    };
-
-    v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
-    v.type = 'text/javascript';
-    s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
-<!-- TrixTech s.r.o. @2025 -->
 	
 </body>
 </html>
