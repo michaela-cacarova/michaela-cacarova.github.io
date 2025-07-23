@@ -200,5 +200,41 @@
 Pomáháme firmám automatizovat zákaznickou komunikaci a zlepšovat zákaznický servis. 🚀</h7>
             <h7>&copy; 2025 TRIX</h7>
         </div>
+
+<!-- AI Asistent města Litovel -->
+<script>
+  ['SelectExtension.js', 'TranslateWidget.js', 'LoadingAnimationExtension.js', 'FileUploadExtension.js'].forEach(name => {
+    document.write(`<script src="https://trixtecheu.github.io/LITOVEL/custom_extensions/${name}"><\/script>`);
+  });
+</script>
+
+<script type="text/javascript">
+  (function(d, t) {
+    const v = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+
+    v.onload = () => {
+      window.voiceflow.chat.load({
+        verify:    { projectID: '6853d3fb3482f50704d3d77c' },
+        url:       'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        assistant: {
+          stylesheet:'https://trixtecheu.github.io/LITOVEL/StylesLitovel.css',
+          extensions: [
+            window.LoadingAnimationExtension,
+            window.FileUploadExtension,
+            window.TranslateWidget,
+            window.VFSelectFixExtension
+          ]
+        }
+      });
+    };
+    v.src  = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+    v.type = "text/javascript";
+    s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+<!-- TrixTech s.r.o. @2025 -->
+	    
 </body>
 </html>
