@@ -202,37 +202,38 @@ Pomáháme firmám automatizovat zákaznickou komunikaci a zlepšovat zákaznick
         </div>
 
 <!-- AI Asistent města Litovel -->
-<script>
-  ['SelectExtension.js', 'TranslateWidget.js', 'LoadingAnimationExtension.js', 'FileUploadExtension.js'].forEach(name => {
-    document.write(`<script src="https://trixtecheu.github.io/LITOVEL/custom_extensions/${name}"><\/script>`);
-  });
-</script>
+<div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
+    <!-- Here is where CONVOCORE renders the widget. -->
+    <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
+</div>
 
-<script type="text/javascript">
-  (function(d, t) {
-    const v = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-
-    v.onload = () => {
-      window.voiceflow.chat.load({
-        verify:    { projectID: '6853d3fb3482f50704d3d77c' },
-        url:       'https://general-runtime.voiceflow.com',
-        versionID: 'production',
-        assistant: {
-          stylesheet:'https://trixtecheu.github.io/LITOVEL/StylesLitovel.css',
-          extensions: [
-            window.LoadingAnimationExtension,
-            window.FileUploadExtension,
-            window.TranslateWidget,
-            window.VFSelectFixExtension
-          ]
+<!-- Remove 'defer' if you want widget to load faster (Will affect website loading) -->
+<script defer>
+    (function() {
+        window.VG_CONFIG = {
+            ID: "h05Tiv0nwqRgQ7oXCPMJ", // YOUR AGENT ID
+            region: 'eu', // YOUR ACCOUNT REGION 
+            render: 'bottom-right', // Widget position
+            // modalMode: true, // Set this to 'true' to open the widget in modal mode
+            stylesheets: [
+                "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css"
+            ],
+            // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
+            // user: {
+            //     name: 'John Doe', // User's name
+            //     email: 'johndoe@gmail.com', // User's email
+            //     phone: '+1234567890', // User's phone number
+            // }
+            // Optional user data -- end
+            // **
+            // userID: 'USER_ID', // If you want to use your own user_id
+            // autostart: true, // Whether to autostart the chatbot with the proactive message
         }
-      });
-    };
-    v.src  = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-    v.type = "text/javascript";
-    s.parentNode.insertBefore(v, s);
-  })(document, 'script');
+        var VG_SCRIPT = document.createElement("script");
+        VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+        VG_SCRIPT.defer = true; // Remove 'defer' if you want widget to load faster (Will affect website loading)
+        document.body.appendChild(VG_SCRIPT);
+    })()
 </script>
 <!-- TrixTech s.r.o. @2025 -->
 	    
