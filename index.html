@@ -202,50 +202,43 @@ Pomáháme firmám automatizovat zákaznickou komunikaci a zlepšovat zákaznick
         </div>
 
 
-<script type="text/javascript">
-  (function(d, t) {
-      var s = d.getElementsByTagName(t)[0];
+<script src="https://trixtecheu.github.io/ICOK/LoadingAnimationExtension.js"></script>
+<script type="module">
+	(function (d, t) {
+	  const v = d.createElement(t),
+		s = d.getElementsByTagName(t)[0];
 
-      // Načti extension (bez pádu, když se nenačte)
-      var e = d.createElement(t);
-      e.src = "https://trixtecheu.github.io/ICOK/LoadingAnimationExtension.js";
-      e.async = true;
-      s.parentNode.insertBefore(e, s);
+    v.onload = function() {
+      window.voiceflow.chat.load({
+        verify: { projectID: '689b9c2990eb8fc31bafc075' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        voice: { url: "https://runtime-api.voiceflow.com" },
+        assistant: {
+          stylesheet: "https://trixtecheu.github.io/ICOK/Styles.css",
+          extensions: [window.LoadingAnimationExtension]
+        }
+      }).then(() => {
+        // prodlevy mezi proaktivními zprávami
+        setTimeout(() => {
+          window.voiceflow.chat.proactive.push({
+            type: 'text',
+            payload: { message: '👋🏻 Zdravím vás, potřebujete poradit?' }
+          });
+        }, 1000);
 
-      // Načti Voiceflow widget
-      var v = d.createElement(t);
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '689b9c2990eb8fc31bafc075' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production',
-          voice: { url: "https://runtime-api.voiceflow.com" },
-          assistant: {
-            stylesheet: 'https://trixtecheu.github.io/ICOK/Styles.css',
-            extensions: [window.LoadingAnimationExtension].filter(Boolean)
-          }
-        }).then(function () {
-          // Proaktivní zprávy
-          try {
-            window.voiceflow.chat.proactive?.clear?.();
-            setTimeout(function () {
-              window.voiceflow.chat.proactive?.push?.({
-                type: "text",
-                payload: { message: "👋🏻 Zdravím vás, potřebujete poradit?" }
-              });
-            }, 1000);
-            setTimeout(function () {
-              window.voiceflow.chat.proactive?.push?.({
-                type: "text",
-                payload: { message: "Jsem tu pro vás!" }
-              });
-            }, 2200);
-          } catch (_) {}
-        });
-      };
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-      v.type = "text/javascript";
-      s.parentNode.insertBefore(v, s);
+        setTimeout(() => {
+          window.voiceflow.chat.proactive.push({
+            type: 'text',
+            payload: { message: 'Jsem tu pro vás!' }
+          });
+        }, 2200);
+      });
+    };
+
+    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+    v.type = "text/javascript";
+    s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
 
