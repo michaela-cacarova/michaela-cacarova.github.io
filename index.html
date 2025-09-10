@@ -242,5 +242,29 @@ Pomáháme firmám automatizovat zákaznickou komunikaci a zlepšovat zákaznick
   })(document, 'script');
 </script>
 
+
+
+		<!-- AI chatbot -->
+<script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '68b93be2364dfd4299fbce19' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production',
+            assistant: {
+               stylesheet: 'https://trixtecheu.github.io/CLIENTS/style.css',
+              },
+            });
+          };
+  
+          v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+          v.type = 'text/javascript';
+          s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+  </script>
+<!-- TrixTech s.r.o. @2025 -->
+
 </body>
 </html>
